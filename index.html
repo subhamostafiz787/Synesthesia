@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Synesthesia: Music + Light</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/addons/p5.sound.min.js"></script>
+    <script defer src="sketch.js"></script>
+    <style>
+      html, body { 
+        margin: 0; 
+        padding: 0; 
+        overflow: hidden; 
+        background: #080b12; 
+        color: #e6e6e6; 
+        font-family: system-ui, sans-serif; 
+      }
+      #ui { 
+        position: fixed; 
+        top: 12px; 
+        left: 12px; 
+        display: flex; 
+        gap: 8px; 
+        align-items: center; 
+        z-index: 10; 
+      }
+      button, label { 
+        padding: 8px 12px; 
+        background: #1f2940; 
+        color: #fff; 
+        border: 1px solid #3a4b7a; 
+        border-radius: 6px; 
+        cursor: pointer; 
+        font-size: 14px;
+      }
+      button:hover, label:hover { 
+        background: #2a385c; 
+      }
+      input[type="file"] { 
+        display: none; 
+      }
+      .pill { 
+        padding: 6px 10px; 
+        border-radius: 999px; 
+        background: #232e4b; 
+        border: 1px solid #3a4b7a; 
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ui">
+      <label for="file">Upload Audio</label>
+      <input id="file" type="file" accept="audio/*" />
+      <button id="play">Play/Pause</button>
+      <button id="mic">Mic Mode</button>
+      <button id="connect">Connect Serial</button>
+      <span class="pill" id="status">No audio</span>
+    </div>
+  </body>
+</html>
